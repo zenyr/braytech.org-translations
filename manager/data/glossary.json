@@ -8,6 +8,9 @@
   "Bungie": {
     "_meta": "@keep"
   },
+  "Clan": {
+    "general": "클랜"
+  },
   "Clovis Bray": {
     "character": "클로비스 브레이"
   },
