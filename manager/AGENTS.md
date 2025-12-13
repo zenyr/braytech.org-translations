@@ -19,6 +19,7 @@ Branches:
 1. **Never commit private files to master**: `manager/`, `package.json`, `AGENTS.md`
 2. **Use `bun run manager sync`** to merge forked → master (auto-excludes private files)
 3. **PRs to upstream**: always branch from `master`, never include private files
+4. **Delegate commits to git task**: use git subagent for all commits unless explicitly specified otherwise
 
 ## Commands (run from root)
 
