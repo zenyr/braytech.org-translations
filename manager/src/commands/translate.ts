@@ -1,5 +1,5 @@
 import type { Command, TranslationData } from "../types";
-import { KO_PATH, ROOT, UNTRANSLATED_MARKER } from "../types";
+import { KO_PATH, ROOT, UNTRANSLATED_MARKER, convertPuaMarkers, puaToMarkers } from "../types";
 
 const EN_PATH = `${ROOT}en/translation.json`;
 
@@ -27,7 +27,10 @@ export class TranslateCommand implements Command {
       return;
     }
 
-    const [key, translation] = positionalArgs;
+    const [key, rawTranslation] = positionalArgs;
+    
+    // Convert [PUA-XXXX] markers to actual PUA characters
+    const translation = convertPuaMarkers(rawTranslation);
 
     await this.translate(key, translation, { dryRun, force });
   }
@@ -80,8 +83,8 @@ export class TranslateCommand implements Command {
     const isUntranslated = koValue.startsWith(UNTRANSLATED_MARKER);
     if (!isUntranslated && !opts.force) {
       console.error(`오류: "${key}"는 이미 번역되어 있습니다.`);
-      console.error(`영문 원문: "${enValue}"`);
-      console.error(`현재 번역: "${koValue}"`);
+      console.error(`영문 원문: "${puaToMarkers(enValue)}"`);
+      console.error(`현재 번역: "${puaToMarkers(koValue)}"`);
       console.error(`덮어쓰려면 --force 플래그를 사용하세요.`);
       process.exit(1);
     }
@@ -101,7 +104,7 @@ export class TranslateCommand implements Command {
       for (const p of missingPlaceholders) {
         console.error(`  - {{${p}}}`);
       }
-      console.error(`\n영문 원문: "${enValue}"`);
+      console.error(`\n영문 원문: "${puaToMarkers(enValue)}"`);
       process.exit(1);
     }
 
@@ -111,19 +114,22 @@ export class TranslateCommand implements Command {
       sourcePua
     );
 
-    // Show warnings if any
-    for (const warning of warnings) {
-      console.warn(`⚠️  ${warning}`);
+    // Reject translation if PUA characters are missing
+    if (warnings.length > 0) {
+      console.error(`\n오류: 번역에 PUA 문자가 누락되었습니다.`);
+      for (const warning of warnings) {
+        console.error(`  ${warning}`);
+      }
+      console.error(`\n영문 원문: "${puaToMarkers(enValue)}"`);
+      console.error(`제출한 번역: "${puaToMarkers(translation)}"`);
+      console.error(`\nPUA 문자를 [PUA-XXXX] 형태로 번역에 포함해주세요.`);
+      console.error(`예시: **[PUA-E038]{{placeholder}}**`);
+      process.exit(1);
     }
 
-    // Show diff
-    console.log(`\n키: ${key}`);
-    console.log(`영문: "${enValue}"`);
-    console.log(`\n변경 전: "${koValue}"`);
-    console.log(`변경 후: "${finalTranslation}"`);
-
     if (opts.dryRun) {
-      console.log(`\n(--dry-run: 변경사항이 저장되지 않았습니다.)`);
+      console.log(`\n[DRY RUN] ${key}`);
+      console.log(`  → "${puaToMarkers(finalTranslation)}"`);
       return;
     }
 
@@ -131,7 +137,7 @@ export class TranslateCommand implements Command {
     const updatedText = this.updateJsonValue(koText, key, koValue, finalTranslation);
 
     await Bun.write(KO_PATH, updatedText);
-    console.log(`\n✓ 저장되었습니다.`);
+    console.log(`✓ ${key}`);
   }
 
   private extractPuaChars(text: string): string[] {

@@ -1,6 +1,6 @@
 import type { TranslationService } from "../services";
 import type { Command } from "../types";
-import { UNTRANSLATED_MARKER } from "../types";
+import { UNTRANSLATED_MARKER, puaToMarkers } from "../types";
 
 export class FindUntranslatedCommand implements Command {
   name = "find-untranslated";
@@ -22,7 +22,7 @@ export class FindUntranslatedCommand implements Command {
 
     console.log(`\n미번역 항목: ${results.length}개\n`);
     for (const { section, key, value } of results.slice(0, 20)) {
-      console.log(`  ${section}.${key}: ${value}`);
+      console.log(`  ${section}.${key}: ${puaToMarkers(value)}`);
     }
     if (results.length > 20) {
       console.log(`  ... 외 ${results.length - 20}개`);

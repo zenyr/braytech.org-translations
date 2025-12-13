@@ -1,7 +1,7 @@
 import type { TranslationService } from "../services";
 import { fuzzySearch } from "../services";
 import type { Command, TranslationData } from "../types";
-import { UNTRANSLATED_MARKER } from "../types";
+import { UNTRANSLATED_MARKER, puaToMarkers } from "../types";
 
 export class BrowseCommand implements Command {
   name = "browse";
@@ -44,7 +44,7 @@ export class BrowseCommand implements Command {
     }
 
     if (typeof target === "string") {
-      console.log(`\n"${path}" = "${target}"\n`);
+      console.log(`\n"${path}" = "${puaToMarkers(target)}"\n`);
       return;
     }
 
@@ -58,7 +58,7 @@ export class BrowseCommand implements Command {
       const fullPath = path ? `${path}.${key}` : key;
 
       if (typeof value === "string") {
-        const display = this.truncate(value, 40);
+        const display = this.truncate(puaToMarkers(value), 40);
         const marker = value.includes(UNTRANSLATED_MARKER) ? " 🦘" : "";
         console.log(`  ${key} = "${display}"${marker}`);
       } else {
@@ -84,7 +84,7 @@ export class BrowseCommand implements Command {
     }
 
     if (typeof value === "string") {
-      console.log(value);
+      console.log(puaToMarkers(value));
     } else {
       console.log(JSON.stringify(value, null, 2));
     }
@@ -123,7 +123,7 @@ export class BrowseCommand implements Command {
     console.log(`\n=== "${query}" 검색 결과 (${results.length}개) ===\n`);
 
     for (const { item, score } of results) {
-      const display = this.truncate(item.value, 50);
+      const display = this.truncate(puaToMarkers(item.value), 50);
       const marker = item.value.includes(UNTRANSLATED_MARKER) ? " 🦘" : "";
       const scoreDisplay = score === 1.0 ? "" : ` [${score.toFixed(2)}]`;
       console.log(`  ${item.path}${scoreDisplay}`);

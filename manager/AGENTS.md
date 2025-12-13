@@ -72,3 +72,42 @@ Rules:
 - Review batches: max 10 items per review round for feedback efficiency
 - **Show source text always** when presenting translations for review
 - Present review in format: Key | Source | Proposal (no checkmarks until user approves)
+- **Use `workdir` parameter for bash commands** - avoid unnecessary `cd` in every command
+
+## Repeatable Translation Workflow
+
+### 0. Review Glossary (First Step)
+```bash
+bun run manager glossary list
+```
+Familiarize with existing translations for consistency
+
+### 1. Identify Untranslated Items
+```bash
+bun run manager browse <Category>
+bun run manager browse <Category> | grep "🦘" | head -10
+```
+
+### 2. Check Glossary
+```bash
+bun run manager glossary search <term>
+bun run manager glossary add <term> <translation> [context]
+```
+
+### 3. Present Review Batch (max 10 items)
+Table format: `| # | Key | 원문 | 제안 |`
+- Include source English text always
+- Check glossary for each term before proposing
+- No checkmarks until user approves
+
+### 4. Apply Approved Translations
+```bash
+bun run manager translate <Category>.<Key> "<translation>"
+```
+Run for each approved item in batch. Use parallel bash calls or workdir parameter.
+
+### 5. Periodic Commits
+After completing category or ~30-50 items:
+- Delegate to git subagent for commit
+- Separate translation commits from manager/glossary commits
+- Follow commit convention (ko: prefix for translations, ✴︎ for manager)

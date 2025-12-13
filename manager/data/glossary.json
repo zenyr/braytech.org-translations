@@ -68,6 +68,12 @@
   "Hunter": {
     "Destiny 직업": "헌터"
   },
+  "Legacy": {
+    "general": "유산"
+  },
+  "Legend": {
+    "general": "범례"
+  },
   "Legendary": {
     "item rarity": "전설"
   },
@@ -81,6 +87,12 @@
   "Mod": {
     "item enhancement": "개조부품"
   },
+  "Modifier": {
+    "activity challenge": "모디파이어"
+  },
+  "New Light": {
+    "player status": "새로운 빛"
+  },
   "Nightfall": {
     "activity type": "황혼전"
   },
@@ -89,6 +101,9 @@
   },
   "Patreon": {
     "_meta": "@keep"
+  },
+  "Pinnacle": {
+    "gear tier": "최고급"
   },
   "Power": {
     "equipment stat": "전투력"
@@ -108,8 +123,14 @@
   "Rare": {
     "item rarity": "희귀"
   },
+  "Reset": {
+    "general": "초기화"
+  },
   "Savathûn": {
     "character": "사바툰"
+  },
+  "Season": {
+    "general": "시즌"
   },
   "Shader": {
     "cosmetic color/texture": "쉐이더"
@@ -153,6 +174,9 @@
   },
   "Weapon": {
     "item type": "무기"
+  },
+  "XP": {
+    "general": "경험치"
   },
   "Zavala": {
     "NPC": "자발라"
