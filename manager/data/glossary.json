@@ -2,6 +2,15 @@
   "Armor": {
     "item type": "방어구"
   },
+  "Braytech": {
+    "_meta": "@keep"
+  },
+  "Bungie": {
+    "_meta": "@keep"
+  },
+  "Clovis Bray": {
+    "character": "클로비스 브레이"
+  },
   "Common": {
     "item rarity": "보편적인 / 커먼"
   },
@@ -11,11 +20,23 @@
   "Darkness": {
     "general": "어둠"
   },
+  "Destiny": {
+    "_meta": "@keep"
+  },
+  "Discord": {
+    "_meta": "@keep"
+  },
+  "Dresstiny": {
+    "_meta": "@keep"
+  },
   "Dungeon": {
     "activity type": "던전"
   },
   "Emblem": {
     "cosmetic item": "문양"
+  },
+  "Eververse": {
+    "in-game store": "에버버스"
   },
   "Exotic": {
     "rare item rarity": "경이"
@@ -31,6 +52,9 @@
   },
   "Guardian": {
     "general": "수호자"
+  },
+  "Hawthorne": {
+    "NPC": "호손"
   },
   "Hunter": {
     "Destiny 직업": "헌터"
@@ -54,6 +78,9 @@
   "Ornament": {
     "cosmetic item customization": "장식"
   },
+  "Patreon": {
+    "_meta": "@keep"
+  },
   "Power": {
     "equipment stat": "전투력"
   },
@@ -69,8 +96,14 @@
   "Rare": {
     "item rarity": "희귀"
   },
+  "Savathûn": {
+    "character": "사바툰"
+  },
   "Shader": {
     "cosmetic color/texture": "쉐이더"
+  },
+  "Shaxx": {
+    "NPC": "샤크스"
   },
   "Strike": {
     "general": "공격대",
@@ -97,10 +130,19 @@
   "Vanguard": {
     "general": "선봉대"
   },
+  "Voluspa": {
+    "_meta": "@keep"
+  },
   "Warlock": {
     "Destiny 직업": "워록"
   },
+  "Warmind": {
+    "AI entity": "전쟁지능"
+  },
   "Weapon": {
     "item type": "무기"
+  },
+  "Zavala": {
+    "NPC": "자발라"
   }
 }
