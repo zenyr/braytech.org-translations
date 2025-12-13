@@ -1,9 +1,24 @@
 {
+  "Armor": {
+    "item type": "방어구"
+  },
+  "Common": {
+    "item rarity": "보편적인 / 커먼"
+  },
   "Crucible": {
     "general": "시련의 장"
   },
   "Darkness": {
     "general": "어둠"
+  },
+  "Dungeon": {
+    "activity type": "던전"
+  },
+  "Emblem": {
+    "cosmetic item": "엠블럼"
+  },
+  "Exotic": {
+    "rare item rarity": "이국적인 / 에그조틱"
   },
   "Fireteam": {
     "general": "화력팀"
@@ -17,23 +32,75 @@
   "Guardian": {
     "general": "수호자"
   },
+  "Hunter": {
+    "Destiny 직업": "헌터"
+  },
+  "Legendary": {
+    "item rarity": "전설적인 / 레전더리"
+  },
   "Light": {
-    "general": "빛"
+    "general": "빛",
+    "equipment level stat": "빛"
+  },
+  "Masterwork": {
+    "rare item enhancement": "걸작"
+  },
+  "Mod": {
+    "item enhancement": "개조부품"
+  },
+  "Nightfall": {
+    "activity type": "나이트폴"
+  },
+  "Ornament": {
+    "cosmetic item customization": "장식"
+  },
+  "Power": {
+    "equipment stat": "파워 / 광휘"
+  },
+  "PvE": {
+    "player vs environment": "PvE"
+  },
+  "PvP": {
+    "player vs player": "PvP"
   },
   "Raid": {
     "general": "레이드"
+  },
+  "Rare": {
+    "item rarity": "희귀 / 레어"
+  },
+  "Shader": {
+    "cosmetic color/texture": "쉐이더"
   },
   "Strike": {
     "general": "공격대",
     "action": "타격"
   },
+  "Titan": {
+    "Destiny 직업": "타이탄"
+  },
   "Tower": {
     "general": "탑"
+  },
+  "Transmog": {
+    "item appearance customization": "트렌스모그"
   },
   "Traveler": {
     "general": "여행자"
   },
+  "Trials": {
+    "pvp activity": "시험"
+  },
+  "Uncommon": {
+    "item rarity": "일반 / 언커먼"
+  },
   "Vanguard": {
     "general": "선봉대"
+  },
+  "Warlock": {
+    "Destiny 직업": "워록"
+  },
+  "Weapon": {
+    "item type": "무기"
   }
 }
