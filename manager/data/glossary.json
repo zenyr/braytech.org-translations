@@ -26,6 +26,9 @@
   "Crucible": {
     "general": "시련의 장"
   },
+  "Cryptarch": {
+    "NPC type": "해독가"
+  },
   "Darkness": {
     "general": "어둠"
   },
@@ -108,6 +111,9 @@
   },
   "Pinnacle": {
     "gear tier": "최고급"
+  },
+  "Plan": {
+    "subscription tier": "플랜"
   },
   "Power": {
     "equipment stat": "전투력"
