@@ -29,6 +29,9 @@ find-untranslated        # list untranslated (🦘)
 sync                     # forked → master
 glossary                 # list|search <q>|add <term> <trans> [ctx]|remove <term> [ctx]
 browse                   # [path]|get <path>|search <q>
+translate <key> <text>   # translate key, auto-preserve PUA/markdown/placeholders
+                         # --dry-run: preview only
+                         # --force: overwrite already-translated
 ```
 
 ## Translation Workflow

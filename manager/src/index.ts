@@ -1,5 +1,12 @@
 import { CLI } from "./cli";
-import { BrowseCommand, FindUntranslatedCommand, GlossaryCommand, StatsCommand, SyncCommand } from "./commands";
+import {
+  BrowseCommand,
+  FindUntranslatedCommand,
+  GlossaryCommand,
+  StatsCommand,
+  SyncCommand,
+  TranslateCommand,
+} from "./commands";
 import { GitService, TranslationService } from "./services";
 import { KO_PATH, ROOT, VERSION } from "./types";
 
@@ -17,6 +24,7 @@ const cli = new CLI(
   .register(new FindUntranslatedCommand(translationService))
   .register(new SyncCommand(gitService, ROOT))
   .register(new GlossaryCommand())
-  .register(new BrowseCommand(translationService));
+  .register(new BrowseCommand(translationService))
+  .register(new TranslateCommand());
 
 await cli.run(Bun.argv.slice(2));
