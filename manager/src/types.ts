@@ -7,7 +7,7 @@ export const PRIVATE_FILES = ["manager/", "package.json", "AGENTS.md"];
 export type TranslationData = Record<string, Record<string, string>>;
 
 export interface Command {
-	name: string;
-	description: string;
-	execute(): Promise<void>;
+  name: string;
+  description: string;
+  execute(): Promise<void>;
 }

@@ -1,10 +1,10 @@
 import type { TranslationData } from "../types";
 
 export class TranslationService {
-	constructor(private path: string) {}
+  constructor(private path: string) {}
 
-	async load(): Promise<TranslationData> {
-		const file = Bun.file(this.path);
-		return await file.json();
-	}
+  async load(): Promise<TranslationData> {
+    const file = Bun.file(this.path);
+    return await file.json();
+  }
 }

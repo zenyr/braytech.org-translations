@@ -9,12 +9,12 @@ const gitService = new GitService(ROOT);
 
 // CLI
 const cli = new CLI(
-	"bun run manager",
-	"Translation manager for ko/ in braytech.org-translations",
-	VERSION,
+  "bun run manager",
+  "Translation manager for ko/ in braytech.org-translations",
+  VERSION
 )
-	.register(new StatsCommand(translationService))
-	.register(new FindUntranslatedCommand(translationService))
-	.register(new SyncCommand(gitService, ROOT));
+  .register(new StatsCommand(translationService))
+  .register(new FindUntranslatedCommand(translationService))
+  .register(new SyncCommand(gitService, ROOT));
 
 await cli.run(Bun.argv.slice(2));
