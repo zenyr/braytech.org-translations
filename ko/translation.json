@@ -201,6 +201,7 @@
     "TemporaryError": "일시적인 Bungie 오류가 발생했습니다.",
     "MemberServiceInactive": "비활동 상태로 인해 프로필 데이터의 백그라운드 새로고침이 일시중지되었습니다.\n\n앱과 상호작용하면 서비스가 다시 활성화됩니다.",
     "WindowSize": "이 환경은 더 큰 창에서 가장 잘 작동합니다. 창을 크게 만들어 주세요.",
+    "MilestonesError": "마일스톤 데이터 로드에 실패했습니다. Bungie의 API에 가용성 문제가 있을 수 있습니다.",
     "APIIssue": "알려진 [Bungie API 문제]({{url}})로 인해 현재 Braytech가 이를 올바르게 표시할 수 없습니다."
   },
   "Auth": {
