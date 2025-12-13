@@ -43,6 +43,10 @@ Examples:
   ${this.name} stats              번역 진행률 확인
   ${this.name} find-untranslated  미번역 항목 목록 출력
   ${this.name} sync               forked → master 동기화
+  ${this.name} glossary           용어집 목록
+  ${this.name} glossary search 수호자
+  ${this.name} browse Settings    Settings 하위 키 탐색
+  ${this.name} browse search 북마크
 `);
   }
 
