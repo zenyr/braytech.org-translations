@@ -10,22 +10,34 @@ export class FindUntranslatedCommand implements Command {
 
   async execute(): Promise<void> {
     const data = await this.translationService.load();
-    const results: { section: string; key: string; value: string }[] = [];
+    const results: { path: string; value: string }[] = [];
 
-    for (const [section, entries] of Object.entries(data)) {
-      for (const [key, value] of Object.entries(entries)) {
-        if (typeof value === "string" && value.includes(UNTRANSLATED_MARKER)) {
-          results.push({ section, key, value });
-        }
-      }
-    }
+    this.findUntranslatedRecursive(data, "", results);
 
     console.log(`\n미번역 항목: ${results.length}개\n`);
-    for (const { section, key, value } of results.slice(0, 20)) {
-      console.log(`  ${section}.${key}: ${puaToMarkers(value)}`);
+    for (const { path, value } of results.slice(0, 20)) {
+      console.log(`  ${path}: ${puaToMarkers(value)}`);
     }
     if (results.length > 20) {
       console.log(`  ... 외 ${results.length - 20}개`);
+    }
+  }
+
+  private findUntranslatedRecursive(
+    obj: any,
+    currentPath: string,
+    results: { path: string; value: string }[]
+  ): void {
+    for (const [key, value] of Object.entries(obj)) {
+      const path = currentPath ? `${currentPath}.${key}` : key;
+
+      if (typeof value === "string") {
+        if (value.includes(UNTRANSLATED_MARKER)) {
+          results.push({ path, value });
+        }
+      } else if (typeof value === "object" && value !== null) {
+        this.findUntranslatedRecursive(value, path, results);
+      }
     }
   }
 }
