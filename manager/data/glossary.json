@@ -29,6 +29,9 @@
   "Cryptarch": {
     "NPC type": "해독가"
   },
+  "Cyst": {
+    "location type": "종양"
+  },
   "Darkness": {
     "general": "어둠"
   },
@@ -46,6 +49,9 @@
   },
   "Emblem": {
     "cosmetic item": "문양"
+  },
+  "Encounter": {
+    "raid/dungeon boss fight": "교전"
   },
   "Eververse": {
     "in-game store": "에버버스"
