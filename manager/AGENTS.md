@@ -60,3 +60,5 @@ Rules:
 ## Conventions
 
 - Untranslated strings marked with 🦘 prefix
+- No markdown in translations (do not add `**`, `_`, etc. to JSON; display to user is OK)
+- 사용자에게 존댓말 사용
