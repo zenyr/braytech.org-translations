@@ -16,47 +16,43 @@ Branches:
 
 ## Key Rules
 
-1. **Never commit private files to master**: `manager/`, `package.json`, `AGENTS.md`
-2. **Use `bun run manager sync`** to merge forked → master (auto-excludes private files)
-3. **PRs to upstream**: always branch from `master`, never include private files
-4. **Delegate commits to git task**: use git subagent for all commits unless explicitly specified otherwise
+1. Never commit to master: `manager/`, `package.json`, `AGENTS.md`
+2. Use `sync` to merge forked → master (auto-excludes private)
+3. PRs to upstream: branch from `master`, no private files
+4. Delegate commits to git subagent unless specified otherwise
 
-## Commands (run from root)
+## Commands (prefix: bun run manager)
 
 ```bash
-bun run manager stats             # ko/ translation stats
-bun run manager find-untranslated # list untranslated (🦘 marker)
-bun run manager sync              # forked → master merge
-bun run manager --help            # show help
+stats                    # ko/ stats
+find-untranslated        # list untranslated (🦘)
+sync                     # forked → master
+glossary                 # list|search <q>|add <term> <trans> [ctx]|remove <term> [ctx]
+browse                   # [path]|get <path>|search <q>
 ```
 
 ## Translation Workflow
 
-1. Work on `forked` branch
-2. Edit `ko/translation.json`
-3. Commit changes
-4. `bun run manager sync` → creates clean merge in `master`
-5. From `master`, create PR branch → submit to `source`
+1. Work on `forked`, edit `ko/translation.json`, commit
+2. `sync` → clean merge to `master`
+3. From `master`, create PR branch → `source`
 
 ## Commit Convention
 
-**Translation commits:**
+**Translation (can PR to upstream):**
 ```
 ko: Add Action.Browse, Action.Edit
 ko: Update Error messages
-ko: Fix typo in Settings
 ```
 
-**Manager commits (private, never in PRs):**
+**Manager (private, stays in forked):**
 ```
 ✴︎ manager: add sync command
-✴︎ manager: refactor CLI structure
 ```
 
 Rules:
-- **Always separate** translation commits from manager commits
-- Translation commits → can go to upstream via PR
-- `✴︎` prefix → private, stays in `forked` branch only
+- Separate translation/manager commits
+- `✴︎` prefix → private only
 
 ## Conventions
 
