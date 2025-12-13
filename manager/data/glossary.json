@@ -123,6 +123,9 @@
   "Rare": {
     "item rarity": "희귀"
   },
+  "Redeem": {
+    "triumph/reward claim action": "획득"
+  },
   "Reset": {
     "general": "초기화"
   },
@@ -137,6 +140,9 @@
   },
   "Shaxx": {
     "NPC": "샤크스"
+  },
+  "Sieve": {
+    "activity type": "추출기"
   },
   "Strike": {
     "general": "공격대",
@@ -156,6 +162,9 @@
   },
   "Trials": {
     "pvp activity": "시험"
+  },
+  "Triumph": {
+    "achievement system": "도전과제"
   },
   "Uncommon": {
     "item rarity": "일반"
