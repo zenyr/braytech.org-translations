@@ -1,4 +1,5 @@
 import type { TranslationService } from "../services";
+import { fuzzySearch } from "../services";
 import type { Command, TranslationData } from "../types";
 import { UNTRANSLATED_MARKER } from "../types";
 
@@ -97,36 +98,36 @@ export class BrowseCommand implements Command {
 
     const data = await this.translationService.load();
     const flattened = this.flatten(data);
-    const lowerQuery = query.toLowerCase();
     const limit = 20;
 
-    const matches: Array<{ path: string; value: string }> = [];
+    const items = Object.entries(flattened).map(([path, value]) => ({
+      path,
+      value,
+    }));
 
-    for (const [path, value] of Object.entries(flattened)) {
-      if (
-        path.toLowerCase().includes(lowerQuery) ||
-        value.toLowerCase().includes(lowerQuery)
-      ) {
-        matches.push({ path, value });
-      }
-    }
+    const results = fuzzySearch(
+      items,
+      query,
+      (item) => [
+        { name: "path", value: item.path },
+        { name: "value", value: item.value },
+      ],
+      { limit }
+    );
 
-    if (matches.length === 0) {
+    if (results.length === 0) {
       console.log(`"${query}"에 대한 결과가 없습니다.`);
       return;
     }
 
-    console.log(`\n=== "${query}" 검색 결과 (${matches.length}개) ===\n`);
+    console.log(`\n=== "${query}" 검색 결과 (${results.length}개) ===\n`);
 
-    for (const { path, value } of matches.slice(0, limit)) {
-      const display = this.truncate(value, 50);
-      const marker = value.includes(UNTRANSLATED_MARKER) ? " 🦘" : "";
-      console.log(`  ${path}`);
+    for (const { item, score } of results) {
+      const display = this.truncate(item.value, 50);
+      const marker = item.value.includes(UNTRANSLATED_MARKER) ? " 🦘" : "";
+      const scoreDisplay = score === 1.0 ? "" : ` [${score.toFixed(2)}]`;
+      console.log(`  ${item.path}${scoreDisplay}`);
       console.log(`    → "${display}"${marker}`);
-    }
-
-    if (matches.length > limit) {
-      console.log(`\n  ... 외 ${matches.length - limit}개`);
     }
     console.log();
   }

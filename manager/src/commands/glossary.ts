@@ -1,3 +1,4 @@
+import { fuzzySearch } from "../services";
 import type { Command, GlossaryData } from "../types";
 import { GLOSSARY_PATH } from "../types";
 
@@ -79,31 +80,32 @@ export class GlossaryCommand implements Command {
     }
 
     const data = await this.load();
-    const lowerQuery = query.toLowerCase();
-    const matches: Array<{ term: string; context: string; translation: string }> = [];
+    const items: Array<{ term: string; context: string; translation: string }> = [];
 
     for (const [term, contexts] of Object.entries(data)) {
       for (const [ctx, trans] of Object.entries(contexts)) {
-        if (
-          term.toLowerCase().includes(lowerQuery) ||
-          trans.toLowerCase().includes(lowerQuery)
-        ) {
-          matches.push({ term, context: ctx, translation: trans });
-        }
+        items.push({ term, context: ctx, translation: trans });
       }
     }
 
-    if (matches.length === 0) {
+    const results = fuzzySearch(items, query, (item) => [
+      { name: "term", value: item.term },
+      { name: "translation", value: item.translation },
+    ]);
+
+    if (results.length === 0) {
       console.log(`"${query}"에 대한 결과가 없습니다.`);
       return;
     }
 
-    console.log(`\n=== "${query}" 검색 결과 (${matches.length}개) ===\n`);
-    for (const { term, context, translation } of matches) {
+    console.log(`\n=== "${query}" 검색 결과 (${results.length}개) ===\n`);
+    for (const { item, score } of results) {
+      const { term, context, translation } = item;
+      const scoreStr = score === 1.0 ? "" : ` (${score.toFixed(2)})`;
       if (context === "general") {
-        console.log(`  ${term} → ${translation}`);
+        console.log(`  ${term} → ${translation}${scoreStr}`);
       } else {
-        console.log(`  ${term} [${context}] → ${translation}`);
+        console.log(`  ${term} [${context}] → ${translation}${scoreStr}`);
       }
     }
     console.log();
