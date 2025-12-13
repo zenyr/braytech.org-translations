@@ -15,10 +15,10 @@
     "activity type": "던전"
   },
   "Emblem": {
-    "cosmetic item": "엠블럼"
+    "cosmetic item": "문양"
   },
   "Exotic": {
-    "rare item rarity": "이국적인 / 에그조틱"
+    "rare item rarity": "경이"
   },
   "Fireteam": {
     "general": "화력팀"
@@ -36,11 +36,11 @@
     "Destiny 직업": "헌터"
   },
   "Legendary": {
-    "item rarity": "전설적인 / 레전더리"
+    "item rarity": "전설"
   },
   "Light": {
     "general": "빛",
-    "equipment level stat": "빛"
+    "equipment level stat": "전투력"
   },
   "Masterwork": {
     "rare item enhancement": "걸작"
@@ -49,13 +49,13 @@
     "item enhancement": "개조부품"
   },
   "Nightfall": {
-    "activity type": "나이트폴"
+    "activity type": "황혼전"
   },
   "Ornament": {
     "cosmetic item customization": "장식"
   },
   "Power": {
-    "equipment stat": "파워 / 광휘"
+    "equipment stat": "전투력"
   },
   "PvE": {
     "player vs environment": "PvE"
@@ -67,7 +67,7 @@
     "general": "레이드"
   },
   "Rare": {
-    "item rarity": "희귀 / 레어"
+    "item rarity": "희귀"
   },
   "Shader": {
     "cosmetic color/texture": "쉐이더"
@@ -83,7 +83,7 @@
     "general": "탑"
   },
   "Transmog": {
-    "item appearance customization": "트렌스모그"
+    "item appearance customization": "형태변환"
   },
   "Traveler": {
     "general": "여행자"
@@ -92,7 +92,7 @@
     "pvp activity": "시험"
   },
   "Uncommon": {
-    "item rarity": "일반 / 언커먼"
+    "item rarity": "일반"
   },
   "Vanguard": {
     "general": "선봉대"
