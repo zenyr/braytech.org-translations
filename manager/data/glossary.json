@@ -36,7 +36,7 @@
     "general": "어둠"
   },
   "Destiny": {
-    "_meta": "@keep"
+    "game title": "데스티니"
   },
   "Discord": {
     "_meta": "@keep"
@@ -161,8 +161,7 @@
     "activity type": "추출기"
   },
   "Strike": {
-    "general": "공격대",
-    "action": "타격"
+    "activity type": "공격전"
   },
   "Titan": {
     "Destiny 직업": "타이탄"
@@ -180,7 +179,7 @@
     "pvp activity": "시험"
   },
   "Triumph": {
-    "achievement system": "도전과제"
+    "achievement system": "업적"
   },
   "Uncommon": {
     "item rarity": "일반"
