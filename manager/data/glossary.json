@@ -204,5 +204,8 @@
   },
   "Zavala": {
     "NPC": "자발라"
+  },
+  "vendor": {
+    "general": "상인"
   }
 }
