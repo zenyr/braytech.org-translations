@@ -1,0 +1,9 @@
+{
+  "name": "@zenyr/braytech-translations-workspace",
+  "private": true,
+  "packageManager": "bun@777.777.777",
+  "scripts": {
+    "preinstall": "echo 'Run: cd manager && bun i' && exit 1",
+    "manager": "bun --cwd manager src/index.ts"
+  }
+}
