@@ -14,6 +14,12 @@
   "Clovis Bray": {
     "character": "클로비스 브레이"
   },
+  "Collection": {
+    "general": "수집품"
+  },
+  "Commendation": {
+    "general": "찬사"
+  },
   "Common": {
     "item rarity": "보편적인 / 커먼"
   },
@@ -95,6 +101,9 @@
   },
   "Raid": {
     "general": "레이드"
+  },
+  "Rank": {
+    "general": "등급"
   },
   "Rare": {
     "item rarity": "희귀"

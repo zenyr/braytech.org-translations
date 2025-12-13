@@ -62,3 +62,13 @@ Rules:
 - Untranslated strings marked with 🦘 prefix
 - No markdown in translations (do not add `**`, `_`, etc. to JSON; display to user is OK)
 - 사용자에게 존댓말 사용
+
+## Translation Process Rules
+
+- **Always use `manager translate`** for all translations (PUA char handling, placeholder validation)
+- Never edit `ko/translation.json` directly
+- **Glossary for proper nouns only** (Bungie, Discord, Destiny, etc.)
+- **Check glossary before proposing translations** - use consistent terms for recurring words
+- Review batches: max 10 items per review round for feedback efficiency
+- **Show source text always** when presenting translations for review
+- Present review in format: Key | Source | Proposal (no checkmarks until user approves)
