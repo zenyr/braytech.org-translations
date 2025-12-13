@@ -17,6 +17,9 @@
   "Collection": {
     "general": "수집품"
   },
+  "Collections Roll": {
+    "fixed roll": "기본 특성"
+  },
   "Commendation": {
     "general": "찬사"
   },
@@ -38,6 +41,9 @@
   "Destiny": {
     "game title": "데스티니"
   },
+  "description:clovis bray": {
+    "_meta": "@keep"
+  },
   "Discord": {
     "_meta": "@keep"
   },
@@ -58,6 +64,9 @@
   },
   "Exotic": {
     "rare item rarity": "경이"
+  },
+  "expiration:seraph": {
+    "_meta": "@keep"
   },
   "Fireteam": {
     "general": "화력팀"
@@ -100,6 +109,9 @@
   "Modifier": {
     "activity challenge": "모디파이어"
   },
+  "name:mida": {
+    "_meta": "@keep"
+  },
   "New Light": {
     "player status": "새로운 빛"
   },
@@ -114,6 +126,10 @@
   },
   "Patreon": {
     "_meta": "@keep"
+  },
+  "Perk": {
+    "weapon/armor": "특성",
+    "subscription/clan": "혜택"
   },
   "Pinnacle": {
     "gear tier": "최고급"
@@ -145,6 +161,9 @@
   "Reset": {
     "general": "초기화"
   },
+  "Roll": {
+    "weapon/armor": "특성 조합"
+  },
   "Savathûn": {
     "character": "사바툰"
   },
@@ -159,6 +178,13 @@
   },
   "Sieve": {
     "activity type": "추출기"
+  },
+  "source:leveling": {
+    "_meta": "@keep"
+  },
+  "Stats": {
+    "weapon/armor": "능력치",
+    "activity/gameplay": "통계"
   },
   "Strike": {
     "activity type": "공격전"
@@ -180,6 +206,9 @@
   },
   "Triumph": {
     "achievement system": "업적"
+  },
+  "type:scout rifle": {
+    "_meta": "@keep"
   },
   "Uncommon": {
     "item rarity": "일반"
