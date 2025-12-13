@@ -1,0 +1,39 @@
+{
+  "Crucible": {
+    "general": "시련의 장"
+  },
+  "Darkness": {
+    "general": "어둠"
+  },
+  "Fireteam": {
+    "general": "화력팀"
+  },
+  "Gambit": {
+    "general": "갬빗"
+  },
+  "Ghost": {
+    "general": "고스트"
+  },
+  "Guardian": {
+    "general": "수호자"
+  },
+  "Light": {
+    "general": "빛"
+  },
+  "Raid": {
+    "general": "레이드"
+  },
+  "Strike": {
+    "general": "공격대",
+    "action": "타격"
+  },
+  "Tower": {
+    "general": "탑"
+  },
+  "Traveler": {
+    "general": "여행자"
+  },
+  "Vanguard": {
+    "general": "선봉대"
+  }
+}
