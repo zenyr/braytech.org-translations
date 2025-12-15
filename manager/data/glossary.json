@@ -94,6 +94,9 @@
     "general": "빛",
     "equipment level stat": "전투력"
   },
+  "MIDA": {
+    "weapon name": "미다"
+  },
   "Masterwork": {
     "rare item enhancement": "걸작"
   },
@@ -160,9 +163,6 @@
   },
   "Season": {
     "general": "시즌"
-  },
-  "Shader": {
-    "cosmetic color/texture": "쉐이더"
   },
   "Shaxx": {
     "NPC": "샤크스"
