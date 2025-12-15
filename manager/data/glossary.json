@@ -41,9 +41,6 @@
   "Destiny": {
     "game title": "데스티니"
   },
-  "description:clovis bray": {
-    "_meta": "@keep"
-  },
   "Discord": {
     "_meta": "@keep"
   },
@@ -64,9 +61,6 @@
   },
   "Exotic": {
     "rare item rarity": "경이"
-  },
-  "expiration:seraph": {
-    "_meta": "@keep"
   },
   "Fireteam": {
     "general": "화력팀"
@@ -108,9 +102,6 @@
   },
   "Modifier": {
     "activity challenge": "모디파이어"
-  },
-  "name:mida": {
-    "_meta": "@keep"
   },
   "New Light": {
     "player status": "새로운 빛"
@@ -179,9 +170,6 @@
   "Sieve": {
     "activity type": "추출기"
   },
-  "source:leveling": {
-    "_meta": "@keep"
-  },
   "Stats": {
     "weapon/armor": "능력치",
     "activity/gameplay": "통계"
@@ -207,9 +195,6 @@
   "Triumph": {
     "achievement system": "업적"
   },
-  "type:scout rifle": {
-    "_meta": "@keep"
-  },
   "Uncommon": {
     "item rarity": "일반"
   },
@@ -233,6 +218,9 @@
   },
   "Zavala": {
     "NPC": "자발라"
+  },
+  "shader": {
+    "general": "안료"
   },
   "vendor": {
     "general": "상인"
