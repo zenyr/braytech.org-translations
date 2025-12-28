@@ -3,6 +3,7 @@ import {
   BrowseCommand,
   FindUntranslatedCommand,
   GlossaryCommand,
+  ManifestCommand,
   StatsCommand,
   SyncCommand,
   TranslateCommand,
@@ -25,6 +26,7 @@ const cli = new CLI(
   .register(new SyncCommand(gitService, ROOT))
   .register(new GlossaryCommand())
   .register(new BrowseCommand(translationService))
-  .register(new TranslateCommand());
+  .register(new TranslateCommand())
+  .register(new ManifestCommand());
 
 await cli.run(Bun.argv.slice(2));

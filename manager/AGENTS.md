@@ -63,6 +63,9 @@ Rules:
 - No markdown in translations (do not add `**`, `_`, etc. to JSON; display to user is OK)
 - 사용자에게 존댓말 사용
 
+## Language Policy
+When communicating with users in Korean, always use formal/polite speech (존댓말). Never use informal speech (반말).
+
 ## Translation Process Rules
 
 - **Always use `manager translate`** for all translations (PUA char handling, placeholder validation)
