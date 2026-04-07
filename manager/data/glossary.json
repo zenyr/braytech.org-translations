@@ -2,14 +2,26 @@
   "Armor": {
     "item type": "방어구"
   },
+  "Barrel": {
+    "무기": "총열"
+  },
+  "Battleground": {
+    "활동 유형": "전장"
+  },
   "Braytech": {
     "_meta": "@keep"
+  },
+  "Bright Dust": {
+    "게임 화폐": "광휘 가루"
   },
   "Bungie": {
     "_meta": "@keep"
   },
   "Clan": {
     "general": "클랜"
+  },
+  "Classified": {
+    "스포일러 방지": "미공개"
   },
   "Clovis Bray": {
     "character": "클로비스 브레이"
@@ -26,6 +38,12 @@
   "Common": {
     "item rarity": "보편적인 / 커먼"
   },
+  "Cosmodrome": {
+    "지역": "코스모드롬"
+  },
+  "Crota": {
+    "군체 왕자": "크로타"
+  },
   "Crucible": {
     "general": "시련의 장"
   },
@@ -38,11 +56,17 @@
   "Darkness": {
     "general": "어둠"
   },
+  "Deepsight": {
+    "능력": "심안"
+  },
   "Destiny": {
     "game title": "데스티니"
   },
   "Discord": {
     "_meta": "@keep"
+  },
+  "Dreaming City": {
+    "지역": "꿈의 도시"
   },
   "Dresstiny": {
     "_meta": "@keep"
@@ -56,6 +80,12 @@
   "Encounter": {
     "raid/dungeon boss fight": "교전"
   },
+  "Enhanced Trait": {
+    "무기/방어구": "강화 특성"
+  },
+  "Eruption": {
+    "Iron Banner 모드": "폭발"
+  },
   "Eververse": {
     "in-game store": "에버버스"
   },
@@ -64,6 +94,12 @@
   },
   "Fireteam": {
     "general": "화력팀"
+  },
+  "Fit": {
+    "Dresstiny 맥락": "코디"
+  },
+  "Freelance": {
+    "솔로 전용": "자유 참가"
   },
   "Gambit": {
     "general": "갬빗"
@@ -77,8 +113,23 @@
   "Hawthorne": {
     "NPC": "호손"
   },
+  "Hellmouth": {
+    "달 지역": "지옥문"
+  },
+  "Hive": {
+    "종족": "군체"
+  },
+  "Holochip": {
+    "외형": "홀로그램 칩"
+  },
   "Hunter": {
     "Destiny 직업": "헌터"
+  },
+  "Iron Banner": {
+    "PvP 이벤트": "강철 깃발"
+  },
+  "Leaderboard": {
+    "UI": "순위표"
   },
   "Legacy": {
     "general": "유산"
@@ -94,8 +145,17 @@
     "general": "빛",
     "equipment level stat": "전투력"
   },
+  "Loadout": {
+    "장비 세트": "장비 구성"
+  },
+  "Lucent Hive": {
+    "적 세력": "빛의 군체"
+  },
   "MIDA": {
     "weapon name": "미다"
+  },
+  "Magazine": {
+    "무기": "탄창"
   },
   "Masterwork": {
     "rare item enhancement": "걸작"
@@ -106,6 +166,9 @@
   "Modifier": {
     "activity challenge": "모디파이어"
   },
+  "Multi-Perk": {
+    "무기": "다중 특성"
+  },
   "New Light": {
     "player status": "새로운 빛"
   },
@@ -115,8 +178,14 @@
   "Order": {
     "event action/order": "명령"
   },
+  "Origin Trait": {
+    "무기": "기원 특성"
+  },
   "Ornament": {
     "cosmetic item customization": "장식"
+  },
+  "PGCR": {
+    "Post Game Carnage Report": "전투 리포트"
   },
   "Patreon": {
     "_meta": "@keep"
@@ -133,6 +202,9 @@
   },
   "Power": {
     "equipment stat": "전투력"
+  },
+  "PsiOps": {
+    "시즌 콘텐츠": "사이옵스"
   },
   "PvE": {
     "player vs environment": "PvE"
@@ -152,6 +224,9 @@
   "Redeem": {
     "triumph/reward claim action": "획득"
   },
+  "Region Chest": {
+    "보물 상자": "지역 상자"
+  },
   "Reset": {
     "general": "초기화"
   },
@@ -170,6 +245,9 @@
   "Sieve": {
     "activity type": "추출기"
   },
+  "Stat Tuning": {
+    "방어구": "능력치 조정"
+  },
   "Stats": {
     "weapon/armor": "능력치",
     "activity/gameplay": "통계"
@@ -177,8 +255,32 @@
   "Strike": {
     "activity type": "공격전"
   },
+  "Stronghold": {
+    "지역/아이템": "요새"
+  },
+  "Subscriber": {
+    "사용자": "구독자"
+  },
+  "Subscription": {
+    "서비스": "구독"
+  },
+  "Taken": {
+    "종족": "굴복자"
+  },
+  "Taken King": {
+    "오릭스, 확장팩": "굴복자의 왕"
+  },
+  "Tess": {
+    "NPC": "테스"
+  },
+  "Tier": {
+    "등급 시스템": "등급"
+  },
   "Titan": {
     "Destiny 직업": "타이탄"
+  },
+  "Title": {
+    "업적 타이틀": "칭호"
   },
   "Tower": {
     "general": "탑"
